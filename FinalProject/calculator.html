@@ -5,132 +5,55 @@
     <title>Calculator</title>
 </head>
 <body>
-  <table class="calculator table">
-    <thead>			
-        <tr>
-            <td colspan=7>
-                <div class="output form-group">
-                    <input type="text" class="ans form-control" readonly name="">
-                </div>				
-            </td>
-        </tr>
-    </thead>
-    <tbody class="actions">		
-        <tr>
-            <td colspan=3></td>
-            <td>
-                <button class="btn btn-op" data-value='*('>(</button>				
-     
-            </td>
-            <td>
-                <button class="btn btn-op" data-value=')'>)</button>				
-     
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='%'>%</button>			
-     
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='ce'>CE</button>				
-     
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="btn btn-op" data-value='inv'>Inv</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='sin'>sin</button>			
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='ln'>ln</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='7'>7</button>
-            </td>
-            <td>
-                <button class="btn" data-value='8'>8</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='9'>9</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='/'>÷</button>				
-     
-            </td>
-        </tr>			
-        <tr>
-            <td>
-                <button class="btn btn-op" data-value='*3.14'>π</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='cos'>cos</button>			
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='log'>log</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='4'>4</button>
-            </td>
-            <td>
-                <button class="btn" data-value='5'>5</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='6'>6</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='*'>	×</button>
-            </td>
-        </tr>
-     
-        <tr>
-            <td>
-                <button class="btn btn-op" data-value='e'>e</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='tan'>tan</button>			
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='radic'>√</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='3'>3</button>
-            </td>
-            <td>
-                <button class="btn" data-value='2'>2</button>				
-            </td>
-            <td>
-                <button class="btn" data-value='1'>1</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='-'>-</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="btn btn-op" data-value='exp'>EXP</button>			
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='x^2'>x²</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='**'>x^</button>		
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='.'>.</button>
-            </td>
-            <td>
-                <button class="btn" data-value='0'>0</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='='>=</button>				
-            </td>
-            <td>
-                <button class="btn btn-op" data-value='+'>+</button>
-            </td>
-        </tr>
-    </tbody>
-    </table>
+    <form name="sci-calc">
+        <h2>SCIENTIFIC CALCULATOR</h2>
+        <table cellspacing="0" cellpadding="1">
+        <TR>
+        <TD COLSPAN="5" ALIGN="center"><input NAME="display" class="sc" VALUE="0" SIZE="44" MAXLENGTH="25"></TD>
+        </TR>
+        <TR>                                  
+        <td align="center"><input type="button" value="Clear" ONCLICK="this.form.display.value = 0 "></TD>
+        <td align="center" colspan="2"><input type="button" value="      Backspace     " ONCLICK="deleteChar(this.form.display)"></TD>
+        <td align="center" colspan="2"><input type="button" value="           Enter          " NAME="Enter" ONCLICK="if (checkNum(this.form.display.value)) { compute(this.form) }"></TD>
+        </TR> 
+        <TR>
+        <td align="center"><input type="button" value=" exp " ONCLICK="if (checkNum(this.form.display.value)) { exp(this.form) }"></TD>
+        <td align="center"><input type="button" value="  7  " ONCLICK="addChar(this.form.display, '7')"></TD>
+        <td align="center"><input type="button" value="  8  " ONCLICK="addChar(this.form.display, '8')"></TD>
+        <td align="center"><input type="button" value="  9  " ONCLICK="addChar(this.form.display, '9')"></TD>
+        <td align="center"><input type="button" value="   /   " ONCLICK="addChar(this.form.display, '/')"></TD>
+        </TR>                                  
+        <TR>                                   
+        <td align="center"><input type="button" value="  ln   " ONCLICK="if (checkNum(this.form.display.value)) { ln(this.form) }"></TD>
+        <td align="center"><input type="button" value="  4  " ONCLICK="addChar(this.form.display, '4')"></TD>
+        <td align="center"><input type="button" value="  5  " ONCLICK="addChar(this.form.display, '5')"></TD>
+        <td align="center"><input type="button" value="  6  " ONCLICK="addChar(this.form.display, '6')"></TD>
+        <td align="center"><input type="button" value="   *   " ONCLICK="addChar(this.form.display, '*')"></TD>
+        </TR>                                   
+        <TR>                                    
+        <td align="center"><input type="button" value=" sqrt " ONCLICK="if (checkNum(this.form.display.value)) { sqrt(this.form) }"></TD>
+        <td align="center"><input type="button" value="  1  " ONCLICK="addChar(this.form.display, '1')"></TD>
+        <td align="center"><input type="button" value="  2  " ONCLICK="addChar(this.form.display, '2')"></TD>
+        <td align="center"><input type="button" value="  3  " ONCLICK="addChar(this.form.display, '3')"></TD>
+        <td align="center"><input type="button" value="   -   " ONCLICK="addChar(this.form.display, '-')"></TD>
+        </TR>                                  
+        <TR>                                   
+        <td align="center"><input type="button" value="  sq  " ONCLICK="if (checkNum(this.form.display.value)) { square(this.form) }"></TD>
+        <td align="center"><input type="button" value="  0  " ONCLICK="addChar(this.form.display, '0')"></TD>
+        <td align="center"><input type="button" value="   .  " ONCLICK="addChar(this.form.display, '.')"></TD>
+        <td align="center"><input type="button" value=" +/- " ONCLICK="changeSign(this.form.display)"></TD>
+        <td align="center"><input type="button" value="   +  " ONCLICK="addChar(this.form.display, '+')"></TD>
+        </TR>                                  
+        <TR>                                   
+        <td align="center"><input type="button" value="   (    " ONCLICK="addChar(this.form.display, '(')"></TD>
+        <td align="center"><input type="button" value="cos" ONCLICK="if (checkNum(this.form.display.value)) { cos(this.form) }"></TD>
+        <td align="center"><input type="button" value=" sin " ONCLICK="if (checkNum(this.form.display.value)) { sin(this.form) }"></TD>
+        <td align="center"><input type="button" value=" tan" ONCLICK="if (checkNum(this.form.display.value)) { tan(this.form) }"></TD>
+        <td align="center"><input type="button" value="   )   " ONCLICK="addChar(this.form.display, ')')"></TD>
+        </TR>                                 
+         
+        </table>
+        </form>
     <button onclick="window.history.back()">Return</button>
 </body>
 </html>

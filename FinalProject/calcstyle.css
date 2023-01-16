@@ -1,37 +1,27 @@
-.calculator{
-	border:2px solid #ddd;
-	width: 280px;
-	box-sizing: border-box;
-	margin: 40px auto 0;
-	font-family: verdana;
-}
-.calculator .form-control{
-	height: 60px;
-}
-.calculator .form-group{
-	margin-bottom: 0;
-}
-.calculator input[type=text]{
-	font-size: 1.5rem;
-	color:#333;
-}
-.calculator .btn {
-	font-size: 1.5rem;
-	color:#333;
-	width: 80px;
-}
-.calculator .btn-op {
-	background-color: #999999;
-}
-
-button{
-    color:gray;
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-}
-
-button:hover{
-    background-color:gray;
-    color: white;
-}
+form{
+	width:440px;
+	padding:25px;
+	margin:auto;
+	border:5px solid #aaa;
+	border-radius:15px 15px;
+	}
+ 
+	input{
+	background:#888;
+	color:#fff;
+	font-size:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:19px;
+	padding-right:19px;
+	margin:6px;
+	}
+ 
+	h2{
+	text-align:center;
+	}
+ 
+	.sc{
+	background:#fff;
+	color:#000;
+	}
