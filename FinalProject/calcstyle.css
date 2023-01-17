@@ -25,3 +25,15 @@ form{
 	background:#fff;
 	color:#000;
 	}
+
+	button{
+		color:gray;
+		width: 100px;
+		height: 50px;
+		font-size: 20px;
+	}
+	
+	button:hover{
+		background-color:gray;
+		color: white;
+	}

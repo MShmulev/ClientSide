@@ -1,6 +1,9 @@
 img{
   width:300px;
   height:300px;
+  border-style: solid;
+  border-width: 5px;
+  margin: 40px 40px 40px 40px;
 }
 button{
     color:gray;
@@ -12,4 +15,17 @@ button{
 button:hover{
     background-color:gray;
     color: white;
+}
+
+p2{
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+body {
+  background-image: url('pics/tzahal.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:50px;
 }
