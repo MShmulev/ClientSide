@@ -24,3 +24,10 @@ p2{
     font-size: 30px;
     font-style: italic;
 }
+
+body{
+    background: url('pics/wallpaper.jpeg') no-repeat center center/cover;
+    margin: 40px 40px 40px 40px;
+    font-style: italic;
+    font-size: 30px;
+}
