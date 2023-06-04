@@ -1,1 +1,1 @@
-Final Project in Full Stack Client Course
+A Project in Full Stack Client Course
